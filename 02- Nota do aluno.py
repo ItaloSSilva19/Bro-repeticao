@@ -13,18 +13,20 @@ n_2 = float(input('Nota 2: '))
 n_3 = float(input('Nota 3: '))
 
 # Classificação da nota em grau e peso  
-if n_1 > n_2 and n_1 > n_3:
-    n_1 = n_1 * 4
-    n_2 = n_2 * 3
-    n_3 = n_3 * 3
-elif n_2 > n_1 and n_1 > n_3:
-    n_2 = n_2 * 4
-    n_1 = n_1 * 3
-    n_3 = n_3 * 3
-else:
-    n_3 = n_3 * 4
-    n_2 = n_2 * 3
-    n_1 = n_1 * 3
+n_1 = a = float(input('Nota 1: '))
+n_2 = b = float(input('Nota 2: '))
+
+if a > b:
+  aux = b
+  b = a
+  a = aux
+
+n_3 = c =float(input('Nota 3: '))
+if b > c:
+  aux = c
+  c = b
+  b = aux
+
 
 #Cálculo da média
 
