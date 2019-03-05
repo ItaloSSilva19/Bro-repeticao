@@ -4,22 +4,30 @@
 # imprimir resultado
 
 #variáveis
-n_1 = float(input('Número 1: '))
-n_2 = float(input('Número 2: '))
-n_3 = float(input('Número 3: '))
-n_4 = float(input('Número 4: '))
+n1 = float(input('Número 1: '))
+n2 = float(input('Número 2: '))
+n3 = float(input('Número 3: '))
+n4 = float(input('Número 4: '))
 
-#distintos e cálculo dos 3 menores
-if n_1 == n_2 or n_1 == n_3 or n_1 == n_4: print('É necessário que os números sejam distintos!')
-elif n_2 == n_3 or n_2 == n_4: print('É necessário que os números sejam distintos!')
-elif n_3 == n_4:print('É necessário que os números sejam distintos!')
-else:
-    if n_1 > n_2 and n_1 > n_3 and n_1 > n_4:
-        res = n_2 + n_3 + n_4
-    elif n_2 > n_1 and n_2 > n_3 and n_2 > n_4:
-        res = n_1 + n_3 + n_4
-    elif n_3 > n_1 and n_3 > n_2 and n_3 > n_4:
-        res = n_1 + n_2 + n_4
-    else:
-        res = n_1 + n_2 + n_3
+# n1 tem que ser maior que n2 e o resto
+# n2 tem que ser maior que n3 e n4
+# n3 tem que ser maior que n4
+# n4 é o menor
+
+if n1 > n2:
+    aux = n2
+    n1 = n2
+    n2 = aux
+    
+if n2 > n3:
+    aux = n3
+    n2 = n3
+    n3 = aux
+    
+if n3 > n4:
+    aux = n3
+    n3 = n4
+    n4 = aux
+
+res = (n1 + n2 + n3)
 print('A soma dos três menores é: ',res)
