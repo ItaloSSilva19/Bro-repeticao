@@ -21,24 +21,24 @@ o imposto normal descontado e o imposto líquido. Se a diferença for negativa m
 print('Considere o salário mínimo como R$1000,00 reais')
 
 #variáveis
-dep = int(input('Dependentes do funcionário: ')) # 3
-sal_fun = float(input('Salário do funcionário: ')) # 10000
+dep = int(input('Dependentes do funcionário: ')) 
+sal_fun = float(input('Salário do funcionário: ')) 
 
 #cálculo imposto bruto
 if sal_fun > 12*1000:
     imp_brt = sal_fun*20/100
 elif sal_fun > 5*1000:
-    imp_brt = sal_fun*8/100 # 800
+    imp_brt = sal_fun*8/100 
 else:
     imp_brt = 0
-print(imp_brt)
+
 #taxa e imposto efetivamente pago
-tx = imp_brt*4/100 # 32
-imp_pg = imp_brt + tx # 832
-print(tx,imp_pg)
+tx = imp_brt*4/100 
+imp_pg = imp_brt + tx
+
 #imposto líquido
 imp_lqd = imp_brt - (dep*300)
-print(imp_lqd)
+
 #imposto a ser pago ou devolvido
 
 if imp_lqd < 0:
