@@ -7,7 +7,7 @@
 sal = float(input('Salário: '))
 
 if sal <= 350:
-    sal = sal + sal*50/100
+    sal = sal *1.5
 else:
-    sal = sal + sal*30/100
+    sal = sal * 1.3
 print('Salário reajustado é: ',sal)
