@@ -19,25 +19,21 @@ nota_2 = float(input('Digite a 2ª nota: '))
 nota_3 = float(input('Digite a última nota: '))
 escolha_media = input('Qual tipo de média? [Aritmética; Ponderada; Harmônica; Geométrica; Quadrática]: ')
 
-# definição das médias:
-media_aritmetica = (nota_1 + nota_2 + nota_3)/ 3
-media_ponderada = (3*nota_1 + 3*nota_2 + 4*nota_3)/10
-media_harmonica = 3/((1/nota_1)+(1/nota_2)+(1/nota_3))
-media_geometrica = (nota_1*nota_2*nota_3)**(1/3)
-media_quadratica = (((nota_1**2)+(nota_2**2)+(nota_3**2))/3)**(1/2)
-
 # cálculo da média escolhida:
-
-
 if escolha_media == 'Aritmética':
+    media_aritmetica = (nota_1 + nota_2 + nota_3)/ 3 # cálculo da média aritmética;
     print('A média aritmética das notas é: ', media_aritmetica)
 elif escolha_media == 'Ponderada':
+    media_ponderada = (3*nota_1 + 3*nota_2 + 4*nota_3)/10 # cálculo da média ponderada;
     print('A média ponderada das notas é: ', media_ponderada)
 elif escolha_media == 'Harmônica':
+    media_harmonica = 3/((1/nota_1)+(1/nota_2)+(1/nota_3)) # cálculo da média harmônica;
     print('A média harmônica das notas é: ', media_harmonica)
 elif escolha_media == 'Geométrica':
+    media_geometrica = (nota_1*nota_2*nota_3)**(1/3) # cálculo da média geométrica;
     print('A média geométrica das notas é: ', media_geometrica)
 elif escolha_media == 'Quadrática':
+    media_quadratica = (((nota_1**2)+(nota_2**2)+(nota_3**2))/3)**(1/2) # cálculo da média quadrática;
     print('A média quadrática das notas é: ', media_quadratica)
 else:
     print('Tipo de média desconhecido! \nNão é possível realizar o cálculo!')
